@@ -12,11 +12,3 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
-
-  sources:
-    repoURL: https://github.com/mlhein/testtest.git
-    targetRevision: HEAD
-    path: guestbook
-  destinations:
-    server: https://kubernetes.default.svc
-    namespace: guestbook
