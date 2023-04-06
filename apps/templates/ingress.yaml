@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: argocd-server-ingress
+  name: nginx-ingress
   namespace: default
   annotations:
     kubernetes.io/ingress.class: nginx
@@ -18,4 +18,14 @@ spec:
           service:
             name: argo-cd-argocd-server
             port:
-              name: https
+              name: http
+  - host: prome.localhost
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: prometheus-server
+            port:
+              name: http
