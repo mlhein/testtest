@@ -14,6 +14,7 @@ spec:
     chart: ingress-nginx
     path: charts/ingress-nginx
     repoURL: https://github.com/kubernetes/ingress-nginx.git
+    targetRevision: 1.7.0
   syncPolicy:
     automated:
       prune: true
