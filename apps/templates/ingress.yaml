@@ -12,7 +12,8 @@ spec:
   project: default
   source:
     chart: ingress-nginx
-    repoURL: https://github.com/kubernetes/ingress-nginx
+    path: charts/ingress-nginx
+    repoURL: https://github.com/kubernetes/ingress-nginx.git
     targetRevision: HEAD
   syncPolicy:
     automated:
